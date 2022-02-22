@@ -75,26 +75,26 @@
             console.log("onHelpButtonClick event was fired."+ JSON.stringify(embedded_svc.settings.extraPrechatFormDetails));
         });
 
-		embedded_svc.init(
-			'https://blueshieldca--chatdev09.my.salesforce.com',
-			'https://chatdev09-blueshieldca.cs37.force.com/Broker',
-			gslbBaseURL,
-			'00D2i0000000q0f',
-			'Agents_Team',
-			{
-				baseLiveAgentContentURL: 'https://c.la3-c1cs-ph2.salesforceliveagent.com/content',
-				deploymentId: '5722i0000004D4Q',
-				buttonId: '5732i0000004D3u',
-				baseLiveAgentURL: 'https://d.la3-c1cs-ph2.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'Agents_Team',
-				isOfflineSupportEnabled: false
-			}
-		);
+		 embedded_svc.init(
+            'https://blueshieldca--itdev03.my.salesforce.com',
+            'https://itdev03-blueshieldca.cs171.force.com/producermedicare',
+            gslbBaseURL,
+            '00D530000004clL',
+            'Broker_Provider_Chat_Deployment',
+            {
+                baseLiveAgentContentURL: 'https://c.la4-c1cs-ia5.salesforceliveagent.com/content',
+                deploymentId: '5724O0000008Tct',
+                buttonId: '5734O0000008UPS',
+                baseLiveAgentURL: 'https://d.la4-c1cs-ia5.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I4O000000CaS0UAK_17bf19f05d4',
+                isOfflineSupportEnabled: false
+            }
+        );
 	};
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://blueshieldca--chatdev09.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://blueshieldca--itdev03.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
